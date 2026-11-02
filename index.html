@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090d16">
+  <title>ARM PROGRESS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a class="logo" href="#">ARM<span>PROGRESS</span></a>
+    <div class="header-level" id="headerLevel">УРОВЕНЬ 1</div>
+  </header>
+
+  <main class="container">
+
+    <section id="homePage" class="page active">
+
+      <div class="welcome">
+        <div class="eyebrow">ТВОЯ ФИЗИЧЕСКАЯ ФОРМА</div>
+        <h1>СТАНЬ<br><span>СИЛЬНЕЕ.</span></h1>
+        <p>Маленький шаг каждый день.</p>
+      </div>
+
+      <div class="level-card">
+        <div class="card-top">
+          <span>ТЕКУЩИЙ УРОВЕНЬ</span>
+          <span id="levelNumber">01</span>
+        </div>
+
+        <div class="level-name" id="levelName">НАЧИНАЮЩИЙ</div>
+
+        <div class="progress-info">
+          <span>Прогресс до следующего уровня</span>
+          <strong id="levelProgressText">0 / 7</strong>
+        </div>
+
+        <div class="progress-track">
+          <div id="levelProgress" class="progress-fill"></div>
+        </div>
+
+        <div class="level-bottom">
+          <span>Завершено тренировок</span>
+          <strong id="totalDays">0</strong>
+        </div>
+      </div>
+
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">ТВОЯ ПРОГРАММА</div>
+          <h2>Сегодняшний день</h2>
+        </div>
+        <div class="workout-icon">💪</div>
+      </div>
+
+      <div class="workout-card">
+        <div class="workout-top">
+          <span id="workoutDay">ДЕНЬ 01 / 07</span>
+          <span class="duration">5–10 МИН</span>
+        </div>
+
+        <h2 id="workoutTitle">ВОЗВРАЩЕНИЕ ФОРМЫ</h2>
+        <p id="workoutDescription">
+          Начни с небольшого занятия. Главное — правильная техника.
+        </p>
+
+        <div class="workout-details">
+          <div>
+            <strong id="taskCount">6</strong>
+            <span>ЗАДАНИЙ</span>
+          </div>
+          <div>
+            <strong>5–10</strong>
+            <span>МИНУТ</span>
+          </div>
+          <div>
+            <strong id="currentLevel">01</strong>
+            <span>УРОВЕНЬ</span>
+          </div>
+        </div>
+
+        <button id="startButton" class="primary-button">
+          НАЧАТЬ ТРЕНИРОВКУ <span>→</span>
+        </button>
+
+        <div id="completedMessage" class="completed-message hidden">
+          ✓ СЕГОДНЯШНЯЯ ТРЕНИРОВКА ЗАВЕРШЕНА
+        </div>
+      </div>
+
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">ТВОЯ ДИСЦИПЛИНА</div>
+          <h2>Неделя</h2>
+        </div>
+      </div>
+
+      <div class="week-card" id="weekGrid"></div>
+
+      <div class="tip-card">
+        <span>ВАЖНО</span>
+        <p>Не гонись за количеством. Выполняй упражнения правильно, отдыхай и не тренируйся через боль.</p>
+      </div>
+
+    </section>
+
+    <section id="trainingPage" class="page">
+
+      <button class="back-button" id="exitTraining">← ВЕРНУТЬСЯ</button>
+
+      <div class="training-header">
+        <div class="eyebrow">ТВОЯ ТРЕНИРОВКА</div>
+        <h1 id="trainingTitle">ДЕНЬ 01</h1>
+        <p id="trainingSubtitle">Уровень 1</p>
+      </div>
+
+      <div class="task-progress-info">
+        <span id="taskCounter">ЗАДАНИЕ 1 ИЗ 6</span>
+        <strong id="taskPercent">0%</strong>
+      </div>
+
+      <div class="progress-track">
+        <div id="taskProgress" class="progress-fill"></div>
+      </div>
+
+      <div class="exercise-card">
+
+        <div class="exercise-number" id="exerciseNumber">01</div>
+
+        <div class="exercise-type" id="exerciseType">ПОВТОРЕНИЯ</div>
+
+        <h2 id="exerciseName">Отжимания</h2>
+
+        <div class="exercise-visual" id="exerciseVisual">💪</div>
+
+        <div class="exercise-amount" id="exerciseAmount">6 РАЗ</div>
+
+        <p id="exerciseDescription">
+          Выполняй упражнение спокойно и контролируй движения.
+        </p>
+
+        <div id="timerBlock" class="timer-block hidden">
+          <div class="timer-display" id="timerDisplay">00:20</div>
+          <div class="timer-controls">
+            <button id="timerStart" class="timer-button">СТАРТ</button>
+            <button id="timerReset" class="timer-button secondary">СБРОС</button>
+          </div>
+        </div>
+
+        <button id="completeTask" class="primary-button">
+          ВЫПОЛНЕНО →
+        </button>
+
+        <button id="skipTask" class="skip-button">
+          Пропустить упражнение
+        </button>
+
+      </div>
+
+      <div class="training-note">
+        Не торопись. Между заданиями можно отдыхать 30–60 секунд.
+      </div>
+
+    </section>
+
+    <section id="finishPage" class="page">
+
+      <div class="finish-content">
+        <div class="finish-icon">🏆</div>
+        <div class="eyebrow">ТРЕНИРОВКА ЗАВЕРШЕНА</div>
+        <h1>ОТЛИЧНАЯ<br><span>РАБОТА!</span></h1>
+
+        <p id="finishDescription">
+          Ещё один шаг к твоей цели.
+        </p>
+
+        <div class="finish-stats">
+          <div>
+            <strong id="finishTasks">6</strong>
+            <span>ЗАДАНИЙ</span>
+          </div>
+          <div>
+            <strong id="finishTime">07:00</strong>
+            <span>ВРЕМЯ</span>
+          </div>
+          <div>
+            <strong id="finishLevel">01</strong>
+            <span>УРОВЕНЬ</span>
+          </div>
+        </div>
+
+        <div id="levelUpMessage" class="level-up hidden">
+          🎉 НОВЫЙ УРОВЕНЬ ОТКРЫТ!
+        </div>
+
+        <button id="finishButton" class="primary-button">
+          НА ГЛАВНУЮ →
+        </button>
+      </div>
+
+    </section>
+
+    <section id="statsPage" class="page">
+
+      <div class="eyebrow">ТВОЙ РЕЗУЛЬТАТ</div>
+      <h1 class="page-title">СТАТИСТИКА</h1>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <strong id="statsLevel">1</strong>
+          <span>УРОВЕНЬ</span>
+        </div>
+        <div class="stat-card">
+          <strong id="statsDays">0</strong>
+          <span>ТРЕНИРОВОК</span>
+        </div>
+        <div class="stat-card">
+          <strong id="statsStreak">0</strong>
+          <span>ДНЕЙ ПОДРЯД</span>
+        </div>
+        <div class="stat-card">
+          <strong id="statsTasks">0</strong>
+          <span>ЗАДАНИЙ</span>
+        </div>
+      </div>
+
+      <div class="section-heading">
+        <h2>История занятий</h2>
+      </div>
+
+      <div id="historyList" class="history-list"></div>
+
+      <div class="settings-card">
+        <h3>ДАННЫЕ</h3>
+        <p>Прогресс хранится в браузере на этом устройстве.</p>
+        <button id="resetButton" class="danger-button">
+          СБРОСИТЬ ПРОГРЕСС
+        </button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <nav class="bottom-nav">
+    <button class="nav-item active" data-page="homePage">
+      <span>⌂</span>
+      <small>ГЛАВНАЯ</small>
+    </button>
+    <button class="nav-item" data-page="statsPage">
+      <span>▥</span>
+      <small>СТАТИСТИКА</small>
+    </button>
+  </nav>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
